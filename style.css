@@ -1,0 +1,55 @@
+.container{
+  width: 100%;
+  height: 100vh;
+  /*Căn giữa màn hình*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container{
+  width: 200px;
+  height: 300px;
+}
+.card{
+  width: 100%;
+  height: 100%;
+  /*delay 1s*/
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card figure{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  border-radius: 5px;
+  /*Căn giữa*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*1 hàng dọc*/
+  flex-direction: column;
+}
+
+.card-container:hover .card{
+  transform:  rotateY(180deg);
+}
+
+.card .front{
+  background: rgba(83, 83, 206);
+  color: white;
+  text-align: center;
+}
+.card .back{
+  background: rgba(75, 170, 173);
+  color: white;
+  transform:  rotateY(180deg);
+}
+
+.back button{
+  background: rgba(83, 83, 206);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
